@@ -20,8 +20,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         />
       </div>
       <div class="card-body">
-        <h2 style="font-size: 16px;">{{ dogInfo.breed }}</h2>
-        <a style="text-decoration: none; color:rgb(15, 142, 216);" [routerLink]="['/details', dogInfo.breed_id]">Ver detalhes</a>
+        <h2 style="font-size: 15px; font-weight: semi-bold; color: rgb(7, 33, 55)">{{ dogInfo.breed }}</h2>
+        <a style="text-decoration: none; color:rgb(11, 108, 164);" [routerLink]="['/details', dogInfo.breed_id]">Ver detalhes</a>
       </div>
     </div>
   `,

@@ -11,11 +11,11 @@ import { BreedInfo } from '../breedinfo';
 
   template: `
     <article style="display: flex; flex-direction: row; align-items: flex-start; margin-top: 100px" class="container text-right">
-      <div style="margin-left: 20px;">
+      <div>
         <h2 style="font-size:80px">{{ breedInfo?.name }}</h2>
         <section>
           <h2 style="color:rgb(13, 125, 223)" >Informações</h2>
-          <ul>
+          <ul class="list-unstyled">
             <li><strong>Peso:</strong> {{ breedInfo?.weight }} kg</li>
             <li><strong>Altura:</strong> {{ breedInfo?.height }} cm</li>
             <li>
@@ -30,7 +30,7 @@ import { BreedInfo } from '../breedinfo';
       </div>
       <div
         class="ratio ratio-1x1"
-        style="max-height: 400px; max-width:400px; overflow: hidden; margin-left: auto;"
+        style="max-height: 450px; max-width:450px; overflow: hidden; margin-left: auto;"
       >
         <img
           style="max-height: 100%; max-width:100%; object-fit: cover;"
