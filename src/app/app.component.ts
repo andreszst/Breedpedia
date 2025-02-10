@@ -8,16 +8,18 @@ import { RouterModule } from '@angular/router';
   imports: [HomeComponent, RouterModule],
   template: `
     <main>
-      <a [routerLink]="['/']">
-        <header class="brand-name">
-          <img
-            class="brand-logo"
-            src="/assets/logo.svg"
-            alt="logo"
-            aria-hidden="true"
-          />
-        </header>
-      </a>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" [routerLink]="['/']">
+              <img
+                class="brand-logo"
+                src="/assets/logo.svg"
+                alt="logo"
+                aria-hidden="true"
+              />
+          </a>
+        </div>
+      </nav>
       <section class="content">
         <router-outlet></router-outlet>
       </section>

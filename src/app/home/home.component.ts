@@ -9,24 +9,32 @@ import { DogService } from '../dog.service';
   standalone: true,
   imports: [CommonModule, DogInfoComponent],
   template: `
-    <section>
-      <form>
-        <input type="text" placeholder="Filtre por raça" #filter />
+    <div class="container text-center" style="margin-top: 20px; margin-bottom: 20px;">
+      <form class="form-inline d-flex">
+        <input
+          style="max-width:300px;"
+          class="form-control me-2"
+          type="text"
+          placeholder="Filtre por raça"
+          #filter
+        />
         <button
-          class="primary"
+          class="btn btn-primary" style="background-color:rgb(15, 142, 216); border-color:rgb(15, 142, 216);"
           type="button"
           (click)="filterResults(filter.value)"
         >
           Buscar
         </button>
       </form>
-    </section>
-    <section class="results">
-      <app-dog-info
-        *ngFor="let dogInfo of filterDogInfoList"
-        [dogInfo]="dogInfo"
-      ></app-dog-info>
-    </section>
+    </div>
+    <div class="container text-left">
+      <div class="row row-cols-5">
+        <app-dog-info
+          *ngFor="let dogInfo of filterDogInfoList"
+          [dogInfo]="dogInfo"
+        ></app-dog-info>
+      </div>
+    </div>
   `,
   styleUrls: ['./home.component.css'],
 })
