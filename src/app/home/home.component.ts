@@ -11,9 +11,12 @@ import { DogService } from '../dog.service';
   template: `
     <div
       class="container text-center"
-      style="margin-top: 20px; margin-bottom: 20px;"
+      style="margin-top: 0px; margin-bottom: 0px;"
     >
-      <form class="form-inline d-flex">
+      <form
+        class="form-inline d-flex"
+        style="margin-top: 20px; margin-bottom: 20px;"
+      >
         <input
           style="max-width:300px; border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
           class="form-control me-2"
@@ -23,11 +26,23 @@ import { DogService } from '../dog.service';
         />
         <button
           class="btn btn-primary"
-          style="background-color:rgb(12, 116, 176); border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
+          style="background-color:rgb(9, 115, 236); border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
           type="button"
           (click)="filterResults(filter.value)"
         >
-          Buscar
+          Buscar 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+            />
+          </svg>
         </button>
       </form>
     </div>

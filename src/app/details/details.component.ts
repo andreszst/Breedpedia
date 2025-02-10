@@ -10,27 +10,10 @@ import { DogInfo } from '../doginfo';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div class="container" style="margin-top: 80px;">
+    <div class="container" style="margin-top: 30px;">
       <div class="row row-cols-1  row-cols-md-2">
-        <div style="margin: 0 auto;">
-          <h2 style="font-size:50px">{{ breedInfo?.name }}</h2>
-          <section>
-            <h2 style="color:rgb(12, 116, 176)">Informações</h2>
-            <ul class="list-unstyled">
-              <li><strong>Peso:</strong> {{ breedInfo?.weight }} kg</li>
-              <li><strong>Altura:</strong> {{ breedInfo?.height }} cm</li>
-              <li>
-                <strong>Expectativa de vida:</strong> {{ breedInfo?.life_span }}
-              </li>
-              <li><strong>Ótimo para:</strong> {{ breedInfo?.bred_for }}</li>
-              <li>
-                <strong>Comportamento:</strong> {{ breedInfo?.temperament }}
-              </li>
-            </ul>
-          </section>
-        </div>
         <div
-          style="max-width: 350px; height: 350px; overflow: hidden; margin: 0 auto;"
+          style="max-width: 380px; height: 400px; overflow: hidden; margin: 0 auto; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); padding: 0px;"
         >
           <div
             id="carouselExampleIndicators"
@@ -59,7 +42,7 @@ import { DogInfo } from '../doginfo';
                   class="d-block w-100"
                   [src]="photo.photo"
                   alt="Dog photo"
-                  style="width: 100%; height: 350px; object-fit: cover;"
+                  style="width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
             </div>
@@ -88,6 +71,27 @@ import { DogInfo } from '../doginfo';
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+        </div>
+        <div
+          style="margin: 10px auto; display: flex; justify-content: center; flex-direction: column;"
+        >
+          <h2 style="font-size:4em; color:rgb(9, 115, 236)">
+            {{ breedInfo?.name }}
+          </h2>
+          <section class="mb-4">
+            <h2 style="color:rgb(242, 113, 8); font-size: 20px">Características</h2>
+            <ul class="list-unstyled">
+              <li><strong>Peso:</strong> {{ breedInfo?.weight }} kg</li>
+              <li><strong>Altura:</strong> {{ breedInfo?.height }} cm</li>
+              <li>
+                <strong>Expectativa de vida:</strong> {{ breedInfo?.life_span }}
+              </li>
+              <li><strong>Ótimo para:</strong> {{ breedInfo?.bred_for }}</li>
+              <li>
+                <strong>Comportamento:</strong> {{ breedInfo?.temperament }}
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </div>
