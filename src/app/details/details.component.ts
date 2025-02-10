@@ -29,22 +29,62 @@ import { DogInfo } from '../doginfo';
             </ul>
           </section>
         </div>
-        <div style="max-width: 420px; height: 300px; overflow: hidden; margin: 0 auto;">
-          <div id="carouselExampleIndicators" class="carousel slide" style="height: 100%;">
+        <div
+          style="max-width: 350px; height: 350px; overflow: hidden; margin: 0 auto;"
+        >
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            style="height: 100%;"
+          >
             <div class="carousel-indicators">
-              <button *ngFor="let photo of breedPhotos; let i = index" type="button" data-bs-target="#carouselExampleIndicators" [attr.data-bs-slide-to]="i" [ngClass]="{'active': i === 0}" [attr.aria-current]="i === 0 ? 'true' : null" [attr.aria-label]="'Slide ' + (i + 1)"></button>
+              <button
+                *ngFor="let photo of breedPhotos; let i = index"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                [attr.data-bs-slide-to]="i"
+                [ngClass]="{ active: i === 0 }"
+                [attr.aria-current]="i === 0 ? 'true' : null"
+                [attr.aria-label]="'Slide ' + (i + 1)"
+              ></button>
             </div>
             <div class="carousel-inner" style="height: 100%;">
-              <div *ngFor="let photo of breedPhotos; let i = index" class="carousel-item" [ngClass]="{'active': i === 0}" style="height: 100%;">
-                <img class="d-block w-100" [src]="photo.photo" alt="Dog photo" style="width: 100%; height: 300px; object-fit: cover;">
+              <div
+                *ngFor="let photo of breedPhotos; let i = index"
+                class="carousel-item"
+                [ngClass]="{ active: i === 0 }"
+                style="height: 100%;"
+              >
+                <img
+                  class="d-block w-100"
+                  [src]="photo.photo"
+                  alt="Dog photo"
+                  style="width: 100%; height: 350px; object-fit: cover;"
+                />
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>

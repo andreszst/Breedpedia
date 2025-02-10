@@ -9,17 +9,21 @@ import { DogService } from '../dog.service';
   standalone: true,
   imports: [CommonModule, DogInfoComponent],
   template: `
-    <div class="container text-center" style="margin-top: 20px; margin-bottom: 20px;">
+    <div
+      class="container text-center"
+      style="margin-top: 20px; margin-bottom: 20px;"
+    >
       <form class="form-inline d-flex">
         <input
-          style="max-width:300px;"
+          style="max-width:300px; border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
           class="form-control me-2"
           type="text"
           placeholder="Filtre por raça"
           #filter
         />
         <button
-          class="btn btn-primary" style="background-color:rgb(12, 116, 176); border-color:rgb(12, 116, 176);"
+          class="btn btn-primary"
+          style="background-color:rgb(12, 116, 176); border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
           type="button"
           (click)="filterResults(filter.value)"
         >
@@ -28,7 +32,9 @@ import { DogService } from '../dog.service';
       </form>
     </div>
     <div class="container-sm text-left">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+      <div
+        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
+      >
         <app-dog-info
           *ngFor="let dogInfo of filterDogInfoList"
           [dogInfo]="dogInfo"
