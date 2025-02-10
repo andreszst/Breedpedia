@@ -19,7 +19,7 @@ import { DogService } from '../dog.service';
           #filter
         />
         <button
-          class="btn btn-primary" style="background-color:rgb(15, 142, 216); border-color:rgb(15, 142, 216);"
+          class="btn btn-primary" style="background-color:rgb(12, 116, 176); border-color:rgb(12, 116, 176);"
           type="button"
           (click)="filterResults(filter.value)"
         >

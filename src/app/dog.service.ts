@@ -9,13 +9,13 @@ export class DogService {
   private dogInfoCache: DogInfo[] = [];
 
   url =
-    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&limit=25&has_breeds=true&order&mime_types=jpg&size=thumb';
+    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true&order&mime_types=jpg';
 
   async getAllDogInfo(): Promise<DogInfo[]> {
     if (this.dogInfoCache.length > 0) {
       return this.dogInfoCache;
     }
-    const response = await fetch(this.url);
+    const response = await fetch(`${this.url}&limit=25`);
     const data = await response.json();
     const uniqueBreeds = new Set();
     this.dogInfoCache = data
@@ -48,6 +48,17 @@ export class DogService {
     }
 
     const response = await fetch(`${this.url}&breed_ids=${breed.id}&limit=1`);
+    const data = await response.json();
+    return data.map((dog: any) => ({
+      id: dog.id,
+      photo: dog.url,
+      breed: dog.breeds[0].name,
+      breed_id: dog.breeds[0].id,
+    }));
+  }
+
+  async getDogInfoByBreedId(breedId: string): Promise<DogInfo[]> {
+    const response = await fetch(`${this.url}&breed_ids=${breedId}&limit=5`);
     const data = await response.json();
     return data.map((dog: any) => ({
       id: dog.id,
