@@ -75,7 +75,7 @@ import { DogInfo } from '../doginfo';
         <div
           style="margin: 10px auto; display: flex; justify-content: center; flex-direction: column;"
         >
-          <h2 style="font-size:4em; color:rgb(9, 115, 236)">
+          <h2 style="font-size:3em; color:rgb(9, 115, 236)">
             {{ breedInfo?.name }}
           </h2>
           <section class="mb-4">

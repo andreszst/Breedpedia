@@ -20,7 +20,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title" style="font-size:1em">{{ dogInfo.breed }}</h5>
+        <h5 class="card-title" style="font-size:1.1em">{{ dogInfo.breed }}</h5>
         <a class="btn btn-info btn-sm" style="color:rgb(255, 255, 255); background-color:rgb(242, 113, 8); border: none;" [routerLink]="['/details', dogInfo.breed_id]">Ver detalhes</a>
       </div>
     </div>

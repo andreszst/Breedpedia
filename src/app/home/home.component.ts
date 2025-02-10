@@ -30,7 +30,7 @@ import { DogService } from '../dog.service';
           type="button"
           (click)="filterResults(filter.value)"
         >
-          Buscar 
+          Buscar
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -46,7 +46,7 @@ import { DogService } from '../dog.service';
         </button>
       </form>
     </div>
-    <div class="container-sm text-left">
+    <div class="container-md text-left">
       <div
         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
       >
