@@ -35,6 +35,7 @@
     justify-self: center;
     margin-top: 20px;
     margin-bottom: 44px;
+    max-width: 90vw;
   }
   
   .breed-name {
