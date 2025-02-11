@@ -2,8 +2,8 @@ import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { DogService } from '../dog.service';
-import { BreedInfo } from '../breedinfo';
-import { DogInfo } from '../doginfo';
+import { BreedData } from '../breed-data';
+import { CardData } from '../card-data';
 
 @Component({
   selector: 'app-details',
@@ -89,12 +89,12 @@ import { DogInfo } from '../doginfo';
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   dogService = inject(DogService);
-  breedInfo: BreedInfo | undefined;
-  dogInfoId: string;
-  breedPhotos: DogInfo[] | undefined;
+  breedInfo: BreedData | undefined;
+  cardDataId: string;
+  breedPhotos: CardData[] | undefined;
   constructor() {
-    this.dogInfoId = this.route.snapshot.params['id'];
-    this.loadBreedInfo();
+    this.cardDataId = this.route.snapshot.params['id'];
+    this.loadBreedData();
     this.loadBreedPhotos();
   }
 
@@ -102,12 +102,12 @@ export class DetailsComponent {
     window.scrollTo(0, 0);
   }
 
-  async loadBreedInfo() {
-    this.breedInfo = await this.dogService.getBreedInfo(this.dogInfoId);
+  async loadBreedData() {
+    this.breedInfo = await this.dogService.getBreedData(this.cardDataId);
   }
   async loadBreedPhotos() {
-    this.breedPhotos = await this.dogService.getDogInfoByBreedId(
-      this.dogInfoId
+    this.breedPhotos = await this.dogService.getCardDataByBreedId(
+      this.cardDataId
     );
   }
 }

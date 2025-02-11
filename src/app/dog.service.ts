@@ -1,24 +1,24 @@
 import { Injectable } from '@angular/core';
-import { DogInfo } from './doginfo';
-import { BreedInfo } from './breedinfo';
+import { CardData } from './card-data';
+import { BreedData } from './breed-data';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DogService {
-  private dogInfoCache: DogInfo[] = [];
+  private cache: CardData[] = [];
 
-  url =
+  images_url =
     'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true&order&mime_types=jpg';
 
-  async getAllDogInfo(): Promise<DogInfo[]> {
-    if (this.dogInfoCache.length > 0) {
-      return this.dogInfoCache;
+  async getCardData(): Promise<CardData[]> {
+    if (this.cache.length > 0) {
+      return this.cache;
     }
-    const response = await fetch(`${this.url}&limit=25`);
+    const response = await fetch(`${this.images_url}&limit=25`);
     const data = await response.json();
     const uniqueBreeds = new Set();
-    this.dogInfoCache = data
+    this.cache = data
       .filter((dog: any) => {
         const breedId = dog.breeds[0].id;
         if (uniqueBreeds.has(breedId)) {
@@ -34,20 +34,24 @@ export class DogService {
         breed: dog.breeds[0].name,
         breed_id: dog.breeds[0].id,
       }))
-      .sort((a: DogInfo, b: DogInfo) => a.breed.localeCompare(b.breed));
-    return this.dogInfoCache;
+      .sort((a: CardData, b: CardData) => a.breed.localeCompare(b.breed));
+    return this.cache;
   }
 
-  async getDogInfoByBreed(breedName: string): Promise<DogInfo[]> {
+  async getCardDataByBreed(breedName: string): Promise<CardData[]> {
     const breedResponse = await fetch('https://api.thedogapi.com/v1/breeds');
     const breeds = await breedResponse.json();
-    const breed = breeds.find((b: any) => b.name.toLowerCase().includes(breedName.toLowerCase().trim()));
+    const breed = breeds.find((b: any) =>
+      b.name.toLowerCase().includes(breedName.toLowerCase().trim())
+    );
 
     if (!breed) {
       throw new Error('Breed not found');
     }
 
-    const response = await fetch(`${this.url}&breed_ids=${breed.id}&limit=1`);
+    const response = await fetch(
+      `${this.images_url}&breed_ids=${breed.id}&limit=1`
+    );
     const data = await response.json();
     return data.map((dog: any) => ({
       id: dog.id,
@@ -57,8 +61,10 @@ export class DogService {
     }));
   }
 
-  async getDogInfoByBreedId(breedId: string): Promise<DogInfo[]> {
-    const response = await fetch(`${this.url}&breed_ids=${breedId}&limit=4`);
+  async getCardDataByBreedId(breedId: string): Promise<CardData[]> {
+    const response = await fetch(
+      `${this.images_url}&breed_ids=${breedId}&limit=4`
+    );
     const data = await response.json();
     return data.map((dog: any) => ({
       id: dog.id,
@@ -68,7 +74,7 @@ export class DogService {
     }));
   }
 
-  async getBreedInfo(breed_id: string): Promise<BreedInfo> {
+  async getBreedData(breed_id: string): Promise<BreedData> {
     const response = await fetch(
       `https://api.thedogapi.com/v1/breeds/${breed_id}`
     );

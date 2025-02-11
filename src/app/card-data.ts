@@ -1,4 +1,4 @@
-export interface DogInfo {
+export interface CardData {
   id: string;
   photo: string;
   breed: string;

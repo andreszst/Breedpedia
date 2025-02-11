@@ -1,4 +1,4 @@
-export interface BreedInfo {
+export interface BreedData {
     name: string;
     weight: number;
     height: number;

@@ -1,13 +1,13 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DogInfoComponent } from '../dog-info/dog-info.component';
-import { DogInfo } from '../doginfo';
+import { CardDataComponent } from '../card/card.component';
+import { CardData } from '../card-data';
 import { DogService } from '../dog.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, DogInfoComponent],
+  imports: [CommonModule, CardDataComponent],
   template: `
     <div class="mb-4">
       <div class="container text-center home-container">
@@ -44,8 +44,8 @@ import { DogService } from '../dog.service';
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
         >
           <app-dog-info
-            *ngFor="let dogInfo of filterDogInfoList"
-            [dogInfo]="dogInfo"
+            *ngFor="let cardData of filterCardDataList"
+            [cardData]="cardData"
           ></app-dog-info>
         </div>
       </div>
@@ -54,8 +54,8 @@ import { DogService } from '../dog.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  dogInfoList: DogInfo[] = [];
-  filterDogInfoList: DogInfo[] = [];
+  cardDataList: CardData[] = [];
+  filterCardDataList: CardData[] = [];
   dogService: DogService = inject(DogService);
 
   constructor() {
@@ -63,15 +63,15 @@ export class HomeComponent {
   }
 
   async loadAllDogs() {
-    this.dogInfoList = await this.dogService.getAllDogInfo();
-    this.filterDogInfoList = this.dogInfoList;
+    this.cardDataList = await this.dogService.getCardData();
+    this.filterCardDataList = this.cardDataList;
   }
 
   async filterResults(breed: string) {
     if (!breed) {
-      this.filterDogInfoList = this.dogInfoList;
+      this.filterCardDataList = this.cardDataList;
       return;
     }
-    this.filterDogInfoList = await this.dogService.getDogInfoByBreed(breed);
+    this.filterCardDataList = await this.dogService.getCardDataByBreed(breed);
   }
 }
