@@ -18,7 +18,7 @@ import { DogService } from '../dog.service';
         style="margin-top: 20px; margin-bottom: 20px;"
       >
         <input
-          style="max-width:300px; border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
+          style="max-width:333px; border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
           class="form-control me-2"
           type="text"
           placeholder="Filtre por raça"
