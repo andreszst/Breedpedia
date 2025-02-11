@@ -9,7 +9,8 @@
 }
 
 .home-input {
-  max-width: 333px;
+  min-width: 240px;
+  max-width: 21vw;
   border: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }

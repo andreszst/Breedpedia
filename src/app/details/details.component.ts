@@ -67,15 +67,15 @@ import { DogInfo } from '../doginfo';
             </button>
           </div>
         </div>
-        <div class="details-text-wrapper">
+        <div class="details-text-wrapper" style="margin-bottom: 24px;">
           <h2 class="breed-name">
             {{ breedInfo?.name }}
           </h2>
-          <section class="mb-4">
+          <section class="mb-3">
             <h2 class="characteristics-title">
               Characteristics
             </h2>
-            <ul class="list-unstyled">
+            <ul class="list-unstyled pb-0">
               <li><strong>Weight:</strong> {{ breedInfo?.weight }} kg</li>
               <li><strong>Height:</strong> {{ breedInfo?.height }} cm</li>
               <li><strong>Lifespan:</strong> {{ breedInfo?.life_span }}</li>
