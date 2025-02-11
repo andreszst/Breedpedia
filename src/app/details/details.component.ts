@@ -74,8 +74,8 @@ import { DogInfo } from '../doginfo';
             </button>
           </div>
         </div>
-        <div style="justify-self:center; margin-top: 20px; margin-bottom: 40px;">
-          <h2 style="font-size:3em; color:rgb(9, 115, 236)">
+        <div style="justify-self:center; margin-top: 20px; margin-bottom: 44px;">
+          <h2 style="font-size:2.8em; color:rgb(9, 115, 236)">
             {{ breedInfo?.name }}
           </h2>
           <section class="mb-4">
