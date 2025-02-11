@@ -13,10 +13,7 @@ import { DogInfo } from '../doginfo';
     <div class="details-container">
       <div>
         <div class="carousel-wrapper">
-          <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-          >
+          <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
               <button
                 *ngFor="let photo of breedPhotos; let i = index"
@@ -71,10 +68,8 @@ import { DogInfo } from '../doginfo';
           <h2 class="breed-name">
             {{ breedInfo?.name }}
           </h2>
-          <section class="mb-3">
-            <h2 class="characteristics-title">
-              Characteristics
-            </h2>
+          <section class="mb-3" style="padding-bottom: 10px;">
+            <h2 class="characteristics-title">Characteristics</h2>
             <ul class="list-unstyled pb-0">
               <li><strong>Weight:</strong> {{ breedInfo?.weight }} kg</li>
               <li><strong>Height:</strong> {{ breedInfo?.height }} cm</li>

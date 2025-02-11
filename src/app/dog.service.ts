@@ -58,7 +58,7 @@ export class DogService {
   }
 
   async getDogInfoByBreedId(breedId: string): Promise<DogInfo[]> {
-    const response = await fetch(`${this.url}&breed_ids=${breedId}&limit=4&size=full`);
+    const response = await fetch(`${this.url}&breed_ids=${breedId}&limit=4`);
     const data = await response.json();
     return data.map((dog: any) => ({
       id: dog.id,
