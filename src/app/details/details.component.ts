@@ -15,7 +15,7 @@ import { DogInfo } from '../doginfo';
     >
       <div>
         <div
-          style="height: 50vh; max-width: 25vw; min-width: 50vh;overflow: hidden; margin: 0 auto; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); padding: 0px;"
+          style="height: 48vh; max-width: 25vw; min-width: 44vh;overflow: hidden; margin: 0 auto; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); padding: 0px;"
         >
           <div
             id="carouselExampleIndicators"
@@ -74,7 +74,7 @@ import { DogInfo } from '../doginfo';
             </button>
           </div>
         </div>
-        <div style="justify-self:center; margin-top: 24px; display:block">
+        <div style="justify-self:center; margin-top: 20px; margin-bottom: 40px;">
           <h2 style="font-size:3em; color:rgb(9, 115, 236)">
             {{ breedInfo?.name }}
           </h2>

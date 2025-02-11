@@ -7,7 +7,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [HomeComponent, RouterModule],
   template: `
-    <main class="bg-light" style="position: relative;">
+    <main class="bg-light">
       <nav class="navbar navbar-dark bg-dark" style="color: white;">
         <div class="container">
           <a class="navbar-brand" [routerLink]="['/']">
@@ -20,7 +20,7 @@ import { RouterModule } from '@angular/router';
           </a>
         </div>
       </nav>
-      <section style="position: relative;">
+      <section>
         <router-outlet></router-outlet>
       </section>
       <footer class="bg-dark text-light text-start py-4">
