@@ -1,0 +1,28 @@
+.dog-info-card {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dog-info-ratio {
+  overflow: hidden;
+}
+
+.dog-info-img {
+  object-fit: cover;
+}
+
+.dog-info-title {
+  font-size: 1em;
+}
+
+.dog-info-button {
+  color: rgb(255, 249, 245);
+  background-color: rgb(242, 113, 8);
+  border: none;
+}
+
+.dog-info-button:hover, .dog-info-button:active {
+  color: rgb(255, 249, 245);
+  background-color: rgb(225, 103, 4);
+}

@@ -1,0 +1,26 @@
+.home-container {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.home-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-input {
+  max-width: 333px;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+  background-color: rgb(9, 115, 236);
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.home-button:hover,
+.home-button:active {
+  background-color: rgb(2, 104, 220);
+}

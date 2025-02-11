@@ -8,20 +8,18 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
   template: `
-    <div
-      class="card mb-4"
-      style="background-color:rgb(255, 255, 255); border: none; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"
-    >
-      <div class="ratio ratio-1x1" style="overflow: hidden;">
-        <img class="card-img-top"
+    <div class="card mb-4 dog-info-card">
+      <div class="ratio ratio-1x1 dog-info-ratio">
+        <img class="card-img-top dog-info-img"
           [src]="dogInfo.photo"
           alt="dog photo"
-          style="object-fit: cover;"
         />
       </div>
       <div class="card-body">
-        <h5 class="card-title" style="font-size:1em">{{ dogInfo.breed }}</h5>
-        <a class="btn btn-info btn-sm" style="color:rgb(255, 249, 245); background-color:rgb(242, 113, 8); border: none;" [routerLink]="['/details', dogInfo.breed_id]">Ver detalhes</a>
+        <h5 class="card-title dog-info-title">{{ dogInfo.breed }}</h5>
+        <a class="btn btn-info btn-sm dog-info-button" [routerLink]="['/details', dogInfo.breed_id]">
+          Ver detalhes
+        </a>
       </div>
     </div>
   `,

@@ -1,0 +1,49 @@
+.details-container {
+    margin-top: 40px;
+  }
+  
+  .carousel-wrapper {
+    height: 48vh;
+    max-width: 25vw;
+    min-width: 44vh;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+  }
+  
+  #carouselExampleIndicators {
+    height: 100%;
+  }
+  
+  .carousel-inner-custom {
+    height: 100%;
+  }
+  
+  .carousel-item-custom {
+    height: 100%;
+  }
+  
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .details-text-wrapper {
+    justify-self: center;
+    margin-top: 20px;
+    margin-bottom: 44px;
+  }
+  
+  .breed-name {
+    font-size: 2.8em;
+    color: rgb(9, 115, 236);
+  }
+  
+  .characteristics-title {
+    color: rgb(242, 113, 8);
+    font-size: 20px;
+  }
+  

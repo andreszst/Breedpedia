@@ -10,17 +10,12 @@ import { DogInfo } from '../doginfo';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div
-      style="margin-top: 40px"
-    >
+    <div class="details-container">
       <div>
-        <div
-          style="height: 48vh; max-width: 25vw; min-width: 44vh;overflow: hidden; margin: 0 auto; border-radius: 10px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); padding: 0px;"
-        >
+        <div class="carousel-wrapper">
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
-            style="height: 100%;"
           >
             <div class="carousel-indicators">
               <button
@@ -33,18 +28,16 @@ import { DogInfo } from '../doginfo';
                 [attr.aria-label]="'Slide ' + (i + 1)"
               ></button>
             </div>
-            <div class="carousel-inner" style="height: 100%;">
+            <div class="carousel-inner carousel-inner-custom">
               <div
                 *ngFor="let photo of breedPhotos; let i = index"
-                class="carousel-item"
+                class="carousel-item carousel-item-custom"
                 [ngClass]="{ active: i === 0 }"
-                style="height: 100%;"
               >
                 <img
-                  class="d-block w-100"
+                  class="d-block w-100 carousel-img"
                   [src]="photo.photo"
                   alt="Dog photo"
-                  style="width: 100%; height: 100%; object-fit: cover;"
                 />
               </div>
             </div>
@@ -74,12 +67,12 @@ import { DogInfo } from '../doginfo';
             </button>
           </div>
         </div>
-        <div style="justify-self:center; margin-top: 20px; margin-bottom: 44px;">
-          <h2 style="font-size:2.8em; color:rgb(9, 115, 236)">
+        <div class="details-text-wrapper">
+          <h2 class="breed-name">
             {{ breedInfo?.name }}
           </h2>
           <section class="mb-4">
-            <h2 style="color:rgb(242, 113, 8); font-size: 20px">
+            <h2 class="characteristics-title">
               Characteristics
             </h2>
             <ul class="list-unstyled">

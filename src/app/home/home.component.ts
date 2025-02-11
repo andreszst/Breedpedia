@@ -9,24 +9,16 @@ import { DogService } from '../dog.service';
   standalone: true,
   imports: [CommonModule, DogInfoComponent],
   template: `
-    <div
-      class="container text-center"
-      style="margin-top: 0px; margin-bottom: 0px;"
-    >
-      <form
-        class="form-inline d-flex"
-        style="margin-top: 20px; margin-bottom: 20px;"
-      >
+    <div class="container text-center home-container">
+      <form class="form-inline d-flex home-form">
         <input
-          style="max-width:333px; border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
-          class="form-control me-2"
+          class="form-control me-2 home-input"
           type="text"
           placeholder="Filtre por raça"
           #filter
         />
         <button
-          class="btn btn-primary"
-          style="background-color:rgb(9, 115, 236); border: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);"
+          class="btn btn-primary home-button"
           type="button"
           (click)="filterResults(filter.value)"
         >
@@ -47,9 +39,7 @@ import { DogService } from '../dog.service';
       </form>
     </div>
     <div class="container-md text-left">
-      <div
-        class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
-      >
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
         <app-dog-info
           *ngFor="let dogInfo of filterDogInfoList"
           [dogInfo]="dogInfo"
@@ -78,7 +68,6 @@ export class HomeComponent {
       this.filterDogInfoList = this.dogInfoList;
       return;
     }
-
     this.filterDogInfoList = await this.dogService.getDogInfoByBreed(breed);
   }
 }
