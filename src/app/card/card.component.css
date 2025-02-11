@@ -17,12 +17,12 @@
 }
 
 .dog-info-button {
-  color: rgb(255, 249, 245);
-  background-color: rgb(242, 113, 8);
+  color: rgb(255, 255, 255);
+  background-color: rgb(236,0,0);
   border: none;
 }
 
 .dog-info-button:active {
-  color: rgb(255, 249, 245);
-  background-color: rgb(219, 99, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(54, 54, 54);
 }

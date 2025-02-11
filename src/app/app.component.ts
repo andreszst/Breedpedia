@@ -13,10 +13,10 @@ import { RouterModule } from '@angular/router';
     <main class="bg-light" style="font-family: 'Roboto';">
       <nav class="navbar navbar-dark bg-dark" style="color: white;">
         <div class="container">
-          <a class="navbar-brand" [routerLink]="['/']">
+          <a class="navbar-brand"  [routerLink]="['/']">
             <img
               class="brand-logo"
-              src="/assets/logo-light-menor.svg"
+              src="/assets/logo-sem-cachorro.svg"
               alt="logo"
               aria-hidden="true"
             />

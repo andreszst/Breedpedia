@@ -9,7 +9,7 @@ export class DogService {
   private cache: CardData[] = [];
 
   images_url =
-    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true&order&mime_types=jpg';
+    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true&order';
 
   async getCardData(): Promise<CardData[]> {
     if (this.cache.length > 0) {
@@ -86,7 +86,6 @@ export class DogService {
       life_span: breed.life_span,
       bred_for: breed.bred_for,
       temperament: breed.temperament,
-      origin: breed.origin,
       reference_image_id: breed.reference_image_id,
     };
   }

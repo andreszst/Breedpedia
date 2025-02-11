@@ -5,6 +5,5 @@ export interface BreedData {
     life_span: string;
     bred_for: string;
     temperament: string;
-    origin: string;
     reference_image_id: string;
   }

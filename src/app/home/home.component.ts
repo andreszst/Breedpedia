@@ -11,7 +11,7 @@ import { DogService } from '../dog.service';
   template: `
     <div class="mb-4">
       <div class="container text-center home-container">
-        <form class="form-inline d-flex home-form">
+        <form class="form-inline d-flex home-form" style="padding: 4px 0px;">
           <input
             class="form-control me-2 home-input"
             type="text"
@@ -20,6 +20,7 @@ import { DogService } from '../dog.service';
           />
           <button
             class="btn btn-primary home-button"
+            style="padding: 8px 12px;"
             type="button"
             (click)="filterResults(filter.value)"
           >
