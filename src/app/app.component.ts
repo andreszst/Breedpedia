@@ -7,7 +7,10 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [HomeComponent, RouterModule],
   template: `
-    <main class="bg-light">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <main class="bg-light" style="font-family: 'Roboto';">
       <nav class="navbar navbar-dark bg-dark" style="color: white;">
         <div class="container">
           <a class="navbar-brand" [routerLink]="['/']">
