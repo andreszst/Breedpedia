@@ -20,7 +20,6 @@ import { NavbarComponent } from './navbar/navbar.component';
           </div>
           <div class="row">
             <div class="col d-flex gap-3">
-              <!-- Link para o LinkedIn -->
               <a
                 href="https://www.linkedin.com/in/andresouza98/"
                 class="text-light"
@@ -28,7 +27,6 @@ import { NavbarComponent } from './navbar/navbar.component';
               >
                 <span class="icon icon-linkedin"></span>
               </a>
-              <!-- Link para o GitHub -->
               <a
                 href="https://github.com/andreszst"
                 class="text-light"

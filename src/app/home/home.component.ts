@@ -1,4 +1,3 @@
-// home.component.ts
 import {
   Component,
   inject,
@@ -37,18 +36,7 @@ import { HomeNavigationService } from '../home-navigation.service';
             (click)="filterResults(filter.value)"
           >
             Search
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-search"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-              />
-            </svg>
+            <span class="icon-search"></span>
           </button>
         </form>
       </div>
@@ -79,7 +67,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeNavigationService.homeClick$.subscribe((isHomeClicked) => {
-      this.onHomeClick(isHomeClicked);
+      this.onHomeClick();
     });
   }
 
@@ -100,10 +88,12 @@ export class HomeComponent implements OnInit {
       alert('A busca não funcionou. Tente novamente ou use outro termo.');
     }
   }
-  onHomeClick(isHomeClicked: boolean): void {
+
+  onHomeClick(): void {
     this.loadAllDogs();
     if (this.form) {
       this.form.nativeElement.reset();
     }
   }
 }
+

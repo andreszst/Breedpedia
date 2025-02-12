@@ -6,12 +6,12 @@ const routeConfig: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Home page',
+    title: 'Breedpedia',
   },
   {
     path: 'details/:id',
     component: DetailsComponent,
-    title: 'Dog details',
+    title: 'Breed details',
   },
 ];
 
