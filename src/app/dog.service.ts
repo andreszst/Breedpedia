@@ -49,20 +49,22 @@ export class DogService {
       throw new Error('Breed not found');
     }
 
-    const imagePromises = matchedBreeds.map((breed: any) =>
-      fetch(`${this.images_url}&breed_ids=${breed.id}&limit=1`)
-        .then((response) => response.json())
-        .then((data: any) =>
-          data.map((dog: any) => ({
-            id: dog.id,
-            photo: dog.url,
-            breed: dog.breeds[0].name,
-            breed_id: dog.breeds[0].id,
-          }))
-        )
-    );
-    const imageArrays = await Promise.all(imagePromises);
-    return imageArrays.flat();
+    const results: CardData[] = [];
+    for (const breed of matchedBreeds) {
+      if (results.length >= 10) break;
+      const response = await fetch(
+        `${this.images_url}&breed_ids=${breed.id}&limit=1`
+      );
+      const data = await response.json();
+      const images = data.map((dog: any) => ({
+        id: dog.id,
+        photo: dog.url,
+        breed: dog.breeds[0].name,
+        breed_id: dog.breeds[0].id,
+      }));
+      results.push(...images);
+    }
+    return results;
   }
 
   async getCardDataByBreedId(breedId: string): Promise<CardData[]> {
