@@ -4,7 +4,7 @@ import { CardData } from '../card-data';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-dog-info',
+  selector: 'card-component',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet],
   template: `
@@ -22,7 +22,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
           class="btn btn-info btn-sm dog-info-button"
           [routerLink]="['/details', cardData.breed_id]"
         >
-          Ver detalhes
+          View details
         </a>
       </div>
     </div>

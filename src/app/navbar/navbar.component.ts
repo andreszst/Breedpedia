@@ -7,7 +7,7 @@ import { Router, RouterModule, NavigationEnd } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <nav class="navbar navbar-dark bg-dark" style="color: white;">
+    <nav class="navbar navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" [routerLink]="['/']">
           <img
@@ -40,6 +40,6 @@ export class NavbarComponent implements OnInit {
     if (this.isHomeActive) {
       console.log('Reiniciando a aplicação...');
       window.location.reload();
+    }
   }
-}
 }

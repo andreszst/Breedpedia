@@ -15,7 +15,7 @@ import { DogService } from '../dog.service';
           <input
             class="form-control me-2 home-input"
             type="text"
-            placeholder="Filtre por raça"
+            placeholder="Search by breed"
             #filter
           />
           <button
@@ -24,7 +24,7 @@ import { DogService } from '../dog.service';
             type="button"
             (click)="filterResults(filter.value)"
           >
-            Buscar
+            Search
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -44,10 +44,10 @@ import { DogService } from '../dog.service';
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
         >
-          <app-dog-info
+          <card-component
             *ngFor="let cardData of filterCardDataList"
             [cardData]="cardData"
-          ></app-dog-info>
+          ></card-component>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@ export class HomeComponent {
       const filteredData = await this.dogService.getCardDataByBreed(breed);
       this.filterCardDataList = filteredData.length ? filteredData : [];
     } catch (error) {
-      alert('Nada encontrado. Tente novamente ou use outro termo.');
+      alert('A busca não funcionou. Tente novamente ou use outro termo.');
     }
   }
 }
