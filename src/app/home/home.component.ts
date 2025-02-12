@@ -73,6 +73,11 @@ export class HomeComponent {
       this.filterCardDataList = this.cardDataList;
       return;
     }
-    this.filterCardDataList = await this.dogService.getCardDataByBreed(breed);
+    try {
+      const filteredData = await this.dogService.getCardDataByBreed(breed);
+      this.filterCardDataList = filteredData.length ? filteredData : [];
+    } catch (error) {
+      this.filterCardDataList = [];
+    }
   }
 }
