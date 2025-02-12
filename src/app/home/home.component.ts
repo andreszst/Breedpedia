@@ -1,5 +1,11 @@
 // home.component.ts
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  inject,
+  OnInit,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardDataComponent } from '../card/card.component';
 import { CardData } from '../card-data';
@@ -13,7 +19,11 @@ import { HomeNavigationService } from '../home-navigation.service';
   template: `
     <div class="mb-4">
       <div class="container text-center home-container">
-        <form class="form-inline d-flex home-form" style="padding: 4px 0px;">
+        <form
+          #formRef
+          class="form-inline d-flex home-form"
+          style="padding: 4px 0px;"
+        >
           <input
             class="form-control me-2 home-input"
             type="text"
@@ -62,6 +72,7 @@ export class HomeComponent implements OnInit {
   public isSearchActive: boolean = false;
   dogService: DogService = inject(DogService);
   homeNavigationService: HomeNavigationService = inject(HomeNavigationService);
+  @ViewChild('formRef') form!: ElementRef<HTMLFormElement>;
 
   constructor() {
     this.loadAllDogs();
@@ -91,13 +102,14 @@ export class HomeComponent implements OnInit {
       alert('A busca não funcionou. Tente novamente ou use outro termo.');
     }
   }
-
   onHomeClick(isHomeClicked: boolean): void {
     if (isHomeClicked && this.isSearchActive) {
       this.isSearchActive = false;
+      if (this.form) {
+        this.form.nativeElement.reset();
+      }
       this.loadAllDogs();
-    }
-    else {
+    } else {
       window.location.reload();
     }
   }
