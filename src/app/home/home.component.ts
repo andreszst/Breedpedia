@@ -69,7 +69,6 @@ import { HomeNavigationService } from '../home-navigation.service';
 export class HomeComponent implements OnInit {
   public cardDataList: CardData[] = [];
   public filterCardDataList: CardData[] = [];
-  public isSearchActive: boolean = false;
   dogService: DogService = inject(DogService);
   homeNavigationService: HomeNavigationService = inject(HomeNavigationService);
   @ViewChild('formRef') form!: ElementRef<HTMLFormElement>;
@@ -97,20 +96,14 @@ export class HomeComponent implements OnInit {
     try {
       const filteredData = await this.dogService.getCardDataByBreed(breed);
       this.filterCardDataList = filteredData.length ? filteredData : [];
-      this.isSearchActive = true;
     } catch (error) {
       alert('A busca não funcionou. Tente novamente ou use outro termo.');
     }
   }
   onHomeClick(isHomeClicked: boolean): void {
-    if (isHomeClicked && this.isSearchActive) {
-      this.isSearchActive = false;
-      if (this.form) {
-        this.form.nativeElement.reset();
-      }
-      this.loadAllDogs();
-    } else {
-      window.location.reload();
+    this.loadAllDogs();
+    if (this.form) {
+      this.form.nativeElement.reset();
     }
   }
 }

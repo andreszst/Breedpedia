@@ -9,7 +9,8 @@ export class DogService {
   private cache: CardData[] = [];
 
   images_url =
-    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true&order';
+    'https://api.thedogapi.com/v1/images/search?api_key=live_yZRUR4bCmfw0LozwO4DD5atQ0oHIuwuc8OOsHM3s9Wk0El5GpudGIy3Rct0iQbrE&has_breeds=true';
+    breeds_url = 'https://api.thedogapi.com/v1/breeds/';
 
   async getCardData(): Promise<CardData[]> {
     if (this.cache.length > 0) {
@@ -39,7 +40,7 @@ export class DogService {
   }
 
   async getCardDataByBreed(breedName: string): Promise<CardData[]> {
-    const breedResponse = await fetch('https://api.thedogapi.com/v1/breeds');
+    const breedResponse = await fetch(this.breeds_url);
     const breeds = await breedResponse.json();
     const matchedBreeds = breeds.filter((b: any) =>
       b.name.toLowerCase().includes(breedName.toLowerCase().trim())
@@ -82,7 +83,7 @@ export class DogService {
 
   async getBreedData(breed_id: string): Promise<BreedData> {
     const response = await fetch(
-      `https://api.thedogapi.com/v1/breeds/${breed_id}`
+      `${this.breeds_url}${breed_id}`
     );
     const breed = await response.json();
     return {
