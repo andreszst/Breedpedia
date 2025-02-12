@@ -1,8 +1,10 @@
-import { Component, inject } from '@angular/core';
+// home.component.ts
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardDataComponent } from '../card/card.component';
 import { CardData } from '../card-data';
 import { DogService } from '../dog.service';
+import { HomeNavigationService } from '../home-navigation.service';
 
 @Component({
   selector: 'app-home',
@@ -54,13 +56,21 @@ import { DogService } from '../dog.service';
   `,
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  cardDataList: CardData[] = [];
-  filterCardDataList: CardData[] = [];
+export class HomeComponent implements OnInit {
+  public cardDataList: CardData[] = [];
+  public filterCardDataList: CardData[] = [];
+  public isSearchActive: boolean = false;
   dogService: DogService = inject(DogService);
+  homeNavigationService: HomeNavigationService = inject(HomeNavigationService);
 
   constructor() {
     this.loadAllDogs();
+  }
+
+  ngOnInit(): void {
+    this.homeNavigationService.homeClick$.subscribe((isHomeClicked) => {
+      this.onHomeClick(isHomeClicked);
+    });
   }
 
   async loadAllDogs() {
@@ -76,8 +86,19 @@ export class HomeComponent {
     try {
       const filteredData = await this.dogService.getCardDataByBreed(breed);
       this.filterCardDataList = filteredData.length ? filteredData : [];
+      this.isSearchActive = true;
     } catch (error) {
       alert('A busca não funcionou. Tente novamente ou use outro termo.');
+    }
+  }
+
+  onHomeClick(isHomeClicked: boolean): void {
+    if (isHomeClicked && this.isSearchActive) {
+      this.isSearchActive = false;
+      this.loadAllDogs();
+    }
+    else {
+      window.location.reload();
     }
   }
 }

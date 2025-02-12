@@ -1,6 +1,8 @@
+// navbar.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, NavigationEnd } from '@angular/router';
+import { HomeNavigationService } from '../home-navigation.service';
 
 @Component({
   selector: 'app-navbar',
@@ -24,22 +26,24 @@ import { Router, RouterModule, NavigationEnd } from '@angular/router';
   styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-  isHomeActive: boolean = false;
+  public isHomeClicked: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private homeNavigationService: HomeNavigationService
+  ) {}
 
   ngOnInit(): void {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.isHomeActive = event.urlAfterRedirects === '/';
+        this.isHomeClicked = event.urlAfterRedirects === '/';
       }
     });
   }
 
   handleClick(): void {
-    if (this.isHomeActive) {
-      console.log('Reiniciando a aplicação...');
-      window.location.reload();
+    if (this.isHomeClicked) {
+      this.homeNavigationService.notifyHomeClick(true);
     }
   }
 }
