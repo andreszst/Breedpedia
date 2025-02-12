@@ -1,28 +1,18 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { NavbarComponent } from "./navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HomeComponent, RouterModule],
+  imports: [HomeComponent, RouterModule, NavbarComponent],
   template: `
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
     <main class="bg-light" style="font-family: 'Roboto';">
-      <nav class="navbar navbar-dark bg-dark" style="color: white;">
-        <div class="container">
-          <a class="navbar-brand"  [routerLink]="['/']">
-            <img
-              class="brand-logo"
-              src="/assets/logo-sem-cachorro.svg"
-              alt="logo"
-              aria-hidden="true"
-            />
-          </a>
-        </div>
-      </nav>
+      <app-navbar></app-navbar>
       <section>
         <router-outlet></router-outlet>
       </section>

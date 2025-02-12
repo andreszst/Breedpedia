@@ -77,7 +77,7 @@ export class HomeComponent {
       const filteredData = await this.dogService.getCardDataByBreed(breed);
       this.filterCardDataList = filteredData.length ? filteredData : [];
     } catch (error) {
-      this.filterCardDataList = [];
+      alert('Nada encontrado. Tente novamente ou use outro termo.');
     }
   }
 }
