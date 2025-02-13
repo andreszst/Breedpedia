@@ -2,6 +2,11 @@
 
 Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RST.
 
+<img src="https://github.com/user-attachments/assets/f2419500-ae9e-417f-9c60-a0f29b7663c0" alt="image" width="260">
+<img src="https://github.com/user-attachments/assets/a135b987-2d0f-48b8-bcf2-efe5d6048284" alt="image" width="150">
+<img src="https://github.com/user-attachments/assets/08cbec40-741e-4a5a-ba8a-dd6bb6151c1f" alt="image" width="150">
+<img src="https://github.com/user-attachments/assets/6ced0207-ade1-452f-9e0b-ae68b877cd81" alt="image" width="150">
+
 ## Tecnologias Utilizadas
 
 - **Angular**: Framework para desenvolvimento de aplicações web.
@@ -25,8 +30,5 @@ Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RS
 5. **Acesse no navegador:**
    http://localhost:4200
 
-## Capturas de tela do projeto
 
-![image](https://github.com/user-attachments/assets/c8ba7e80-1f0f-4ecf-a6e2-4f859f13e6a9)
-![image](https://github.com/user-attachments/assets/c631750d-22fb-4bea-9bb5-cf5c9d05d7e1)
-![image](https://github.com/user-attachments/assets/c7bd32fa-7f95-4d2b-8301-4a887284ef0e)
+
