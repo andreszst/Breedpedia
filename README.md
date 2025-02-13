@@ -8,6 +8,8 @@ Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RS
 <img src="https://github.com/user-attachments/assets/a135b987-2d0f-48b8-bcf2-efe5d6048284" alt="image" width="150">
 <img src="https://github.com/user-attachments/assets/08cbec40-741e-4a5a-ba8a-dd6bb6151c1f" alt="image" width="150">
 <img src="https://github.com/user-attachments/assets/6ced0207-ade1-452f-9e0b-ae68b877cd81" alt="image" width="150">
+<img src="https://github.com/user-attachments/assets/13dc9fe7-9e89-4bcf-b28a-c62695f5715a" alt="image" width="150">
+<img src="https://github.com/user-attachments/assets/13d33381-baee-443b-a296-4ac975486bec" alt="image" width="150">
 
 ## ⚙️ Ferramentas Utilizadas
 
