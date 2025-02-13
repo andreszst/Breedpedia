@@ -1,6 +1,6 @@
 # Breedpedia
 
-Projeto desenvolvido durante o processo seletivo para estágio front-end na F1rst.
+Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RST.
 
 ## Tecnologias Utilizadas
 
