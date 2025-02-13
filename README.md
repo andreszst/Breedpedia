@@ -22,7 +22,7 @@ Projeto desenvolvido durante o processo seletivo para estágio front-end na F1rs
    npm install
 4. **Inicie a aplicação:**
    ng serve
-5. **Acesse no navegdor:**
+5. **Acesse no navegador:**
    http://localhost:4200
 
 ## Capturas de tela do projeto
