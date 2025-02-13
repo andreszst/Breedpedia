@@ -1,25 +1,30 @@
-# Breedpedia
+#  🐕 Breedpedia
 
 Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RST.
 
-<img src="https://github.com/user-attachments/assets/f2419500-ae9e-417f-9c60-a0f29b7663c0" alt="image" width="260">
-<img src="https://github.com/user-attachments/assets/a135b987-2d0f-48b8-bcf2-efe5d6048284" alt="image" width="150">
-<img src="https://github.com/user-attachments/assets/08cbec40-741e-4a5a-ba8a-dd6bb6151c1f" alt="image" width="150">
-<img src="https://github.com/user-attachments/assets/6ced0207-ade1-452f-9e0b-ae68b877cd81" alt="image" width="150">
+## 📸 Capturas de Tela
 
-## Tecnologias Utilizadas
+<img src="https://github.com/user-attachments/assets/93c23aad-0033-4557-9e6b-9b20c70ede09" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/2bcc588e-4015-4b30-9419-349549874dc6" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/618cc4ca-deac-4dfd-ae8d-36375246b22a" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/4715daad-2dda-4133-a66b-d9412f371f63" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/2a04214f-2625-49ff-9d06-d6fa904b8505" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/fa5d78a4-7069-4950-9802-d71bc81ff355" alt="image" height="200">
+<img src="https://github.com/user-attachments/assets/92c03299-18ea-4c6c-b1df-3161e0c2756b" alt="image" height="200">
 
-- **Angular**: Framework para desenvolvimento de aplicações web.
+## ⚙️ Ferramentas Utilizadas
+
+- **Angular 16**: Framework para desenvolvimento de aplicações web.
 - **Bootstrap**: Biblioteca para estilização e responsividade.
 - **The Dog API**: API que fornece informações e imagens de cachorros.
  
- ## Funcionalidades
+ ## ✨ Funcionalidades
 
 - Exibe 15 diferentes raças de cachorros a cada carregamento da aplicação.
 - Busca por raça digitada pelo usuário.
 - Apresenta os detalhes de cada raça.
 
-## Como Executar o Projeto
+##  🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
    git clone https://github.com/andreszst/Desafio-Front-Santander
