@@ -1,4 +1,4 @@
-#  🐕 BREEDPEDIA
+#  🐕 Breedpedia
 
 Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RST.
 
