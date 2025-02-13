@@ -14,7 +14,7 @@ Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RS
 
 ## ⚙️ Ferramentas Utilizadas
 
-- **Angular**: Framework para desenvolvimento de aplicações web.
+- **Angular 16**: Framework para desenvolvimento de aplicações web.
 - **Bootstrap**: Biblioteca para estilização e responsividade.
 - **The Dog API**: API que fornece informações e imagens de cachorros.
  
