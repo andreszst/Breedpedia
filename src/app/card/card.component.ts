@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardData } from '../card-data';
+import { CardData } from '../card.interface';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({

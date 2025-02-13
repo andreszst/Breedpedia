@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { CardData } from './card-data';
-import { BreedData } from './breed-data';
+import { CardData } from './card.interface';
+import { BreedData } from './breed.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -32,7 +32,7 @@ export class DogService {
       .map((dog: any) => ({
         id: dog.id,
         photo: dog.url,
-        breed: dog.breeds[0].name.replace("Miniature", "Mini"),
+        breed: dog.breeds[0].name.replace('Miniature', 'Mini'),
         breed_id: dog.breeds[0].id,
       }))
       .sort((a: CardData, b: CardData) => a.breed.localeCompare(b.breed));
@@ -60,7 +60,7 @@ export class DogService {
       const images = data.map((dog: any) => ({
         id: dog.id,
         photo: dog.url,
-        breed: dog.breeds[0].name.replace("Miniature", "Mini"),
+        breed: dog.breeds[0].name.replace('Miniature', 'Mini'),
         breed_id: dog.breeds[0].id,
       }));
       results.push(...images);

@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardDataComponent } from '../card/card.component';
-import { CardData } from '../card-data';
+import { CardData } from '../card.interface';
 import { DogService } from '../dog.service';
 import { HomeNavigationService } from '../home-navigation.service';
 
@@ -96,4 +96,3 @@ export class HomeComponent implements OnInit {
     }
   }
 }
-
