@@ -42,7 +42,7 @@ import { HomeNavigationService } from '../home-navigation.service';
       </div>
       <div class="container-md text-left">
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
+          class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
         >
           <card-component
             *ngFor="let cardData of filterCardDataList"
