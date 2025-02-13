@@ -1,6 +1,6 @@
 # Breedpedia
 
-Projeto desenvolvido durante o processo seletivo para estágio fron-end na F1rst.
+Projeto desenvolvido durante o processo seletivo para estágio front-end na F1rst.
 
 ## Tecnologias Utilizadas
 
@@ -17,7 +17,7 @@ Projeto desenvolvido durante o processo seletivo para estágio fron-end na F1rst
 ## Como Executar o Projeto
 
 1. **Clone o repositório:**
-   git clone <URL-do-repositório>
+   git clone https://github.com/andreszst/Desafio-Front-Santander
 3. **Dentro da pasta instale as dependências:**
    npm install
 4. **Inicie a aplicação:**
