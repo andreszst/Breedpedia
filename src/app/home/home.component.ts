@@ -7,9 +7,9 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardDataComponent } from '../card/card.component';
-import { CardData } from '../card.interface';
-import { DogService } from '../dog.service';
-import { HomeNavigationService } from '../home-navigation.service';
+import { CardData } from '../interfaces/card.interface';
+import { DogService } from '../services/dog.service';
+import { HomeNavigationService } from '../services/home-navigation.service';
 
 @Component({
   selector: 'app-home',

@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule, NavigationEnd } from '@angular/router';
-import { HomeNavigationService } from '../home-navigation.service';
+import { HomeNavigationService } from '../services/home-navigation.service';
 
 @Component({
   selector: 'app-navbar',

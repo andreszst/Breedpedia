@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { DogService } from '../dog.service';
-import { BreedData } from '../breed.interface';
-import { CardData } from '../card.interface';
+import { DogService } from '../services/dog.service';
+import { BreedData } from '../interfaces/breed.interface';
+import { CardData } from '../interfaces/card.interface';
 
 @Component({
   selector: 'app-details',

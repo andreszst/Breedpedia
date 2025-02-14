@@ -1,6 +1,6 @@
 import { DogService } from './dog.service';
-import { BreedData } from './breed.interface';
-import { CardData } from './card.interface';
+import { BreedData } from '../interfaces/breed.interface';
+import { CardData } from '../interfaces/card.interface';
 
 describe('DogService - getBreedData', () => {
   let service: DogService;
