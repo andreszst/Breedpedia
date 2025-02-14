@@ -27,7 +27,7 @@ Projeto desenvolvido durante o processo seletivo para estágio front-end na F1RS
 ##  🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
-   git clone https://github.com/andreszst/Desafio-Front-Santander
+   git clone https://github.com/andreszst/Breedpedia
 3. **Dentro da pasta instale as dependências:**
    npm install
 4. **Inicie a aplicação:**
