@@ -33,7 +33,7 @@ import { HomeNavigationService } from '../services/home-navigation.service';
             class="btn btn-primary home-button"
             style="padding: 8px 12px;"
             type="button"
-            (click)="filterResults(filter.value)"
+            (click)="searchResults(filter.value)"
           >
             Search
             <span class="icon-search"></span>
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('formRef') form!: ElementRef<HTMLFormElement>;
 
   constructor() {
-    this.loadAllDogs();
+    this.loadCards();
   }
 
   ngOnInit(): void {
@@ -71,12 +71,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  async loadAllDogs() {
+  async loadCards() {
     this.cardDataList = await this.dogService.getCardData();
     this.filterCardDataList = this.cardDataList;
   }
 
-  async filterResults(breed: string) {
+  async searchResults(breed: string) {
     if (!breed) {
       this.filterCardDataList = this.cardDataList;
       return;
@@ -90,7 +90,7 @@ export class HomeComponent implements OnInit {
   }
 
   onHomeClick(): void {
-    this.loadAllDogs();
+    this.loadCards();
     if (this.form) {
       this.form.nativeElement.reset();
     }
