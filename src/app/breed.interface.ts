@@ -1,7 +1,7 @@
 export interface BreedData {
   name: string;
-  weight: number;
-  height: number;
+  weight: string;
+  height: string;
   life_span: string;
   bred_for: string;
   temperament: string;
