@@ -103,11 +103,9 @@ export class DetailsComponent {
   }
 
   async loadBreedData() {
-    this.breedInfo = await this.dogService.getBreedData(this.cardDataId);
+    this.breedInfo = await this.dogService.getBreedDetailsData(this.cardDataId);
   }
   async loadBreedPhotos() {
-    this.breedPhotos = await this.dogService.getCardDataByBreedId(
-      this.cardDataId
-    );
+    this.breedPhotos = await this.dogService.getCarouselData(this.cardDataId);
   }
 }

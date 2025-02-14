@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
       return;
     }
     try {
-      const filteredData = await this.dogService.getCardDataByBreed(breed);
+      const filteredData = await this.dogService.getSearchCardData(breed);
       this.filterCardDataList = filteredData.length ? filteredData : [];
     } catch (error) {
       alert('A busca não funcionou. Tente novamente ou use outro termo.');

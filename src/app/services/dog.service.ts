@@ -39,7 +39,7 @@ export class DogService {
     return this.cache;
   }
 
-  async getCardDataByBreed(breedName: string): Promise<CardData[]> {
+  async getSearchCardData(breedName: string): Promise<CardData[]> {
     const breedResponse = await fetch(this.breeds_url);
     const breeds = await breedResponse.json();
     const matchedBreeds = breeds.filter((b: any) =>
@@ -68,9 +68,9 @@ export class DogService {
     return results;
   }
 
-  async getCardDataByBreedId(breedId: string): Promise<CardData[]> {
+  async getCarouselData(breedId: string): Promise<CardData[]> {
     const response = await fetch(
-      `${this.search_url}&breed_ids=${breedId}&limit=8`
+      `${this.search_url}&breed_ids=${breedId}&limit=10`
     );
     const data = await response.json();
     return data.map((dog: any) => ({
@@ -81,7 +81,7 @@ export class DogService {
     }));
   }
 
-  async getBreedData(breed_id: string): Promise<BreedData> {
+  async getBreedDetailsData(breed_id: string): Promise<BreedData> {
     const response = await fetch(`${this.breeds_url}${breed_id}`);
     const breed = await response.json();
     return {

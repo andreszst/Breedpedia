@@ -39,7 +39,7 @@ describe('DogService - getBreedData', () => {
       json: jest.fn().mockResolvedValue(mockBreedData),
     });
 
-    const result = await service.getBreedData('1');
+    const result = await service.getBreedDetailsData('1');
 
     const expected: BreedData = {
       name: 'Affenpinscher',
@@ -203,7 +203,7 @@ describe('DogService - getBreedData', () => {
       json: jest.fn().mockResolvedValue(mockCardData),
     });
 
-    const result = await service.getCardDataByBreedId(breedId);
+    const result = await service.getCarouselData(breedId);
 
     const expected: CardData[] = [
       {
