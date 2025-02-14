@@ -70,7 +70,7 @@ export class DogService {
 
   async getCarouselData(breedId: string): Promise<CardData[]> {
     const response = await fetch(
-      `${this.search_url}&breed_ids=${breedId}&limit=10`
+      `${this.search_url}&breed_ids=${breedId}&limit=8`
     );
     const data = await response.json();
     return data.map((dog: any) => ({
